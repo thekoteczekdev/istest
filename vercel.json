@@ -1,0 +1,37 @@
+{
+	"version": 2,
+	"routes": [
+    {
+      "src": "/api/voucher",
+      "dest": "/functions/api/voucher.js"
+    },
+		{
+      "src": "/api/payment_link",
+      "dest": "/functions/api/payment_link.js"
+    },
+		{
+      "src": "/api/microsms_sms",
+      "dest": "/functions/api/microsms_sms.js"
+    },
+		{
+      "src": "/api/payment_webhook",
+      "dest": "/functions/api/payment_webhook.js"
+    }
+  ],
+  "builds": [
+		{
+		 "src": "functions/api/**/*.js",
+		 "use": "@vercel/node"
+	 	},
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+			"config": {
+        "serverFiles": [
+					"functions/**",
+					"misc/**"
+				]
+      }
+    }
+  ]
+}

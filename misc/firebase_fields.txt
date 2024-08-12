@@ -1,0 +1,73 @@
+
+=== KONFIGURACJA SKLEPU (SEKRETNA) ===
+REF: /config/[id sklepu]
+lvlup - czy płatność lvlup skonfigurowana
+lvlup_api - klucz api lvlup
+microsms - czy płatność microsms skonfigurowana
+microsms_user_id - id użytkownika microsms
+microsms_transfer_id - id przelewu z microsms
+microsms_transfer_hash - hash przelewu z microsms
+microsms_sms_id - id smsa z microsms
+microsms_sms_text - treść smsa z microsms
+paypal - czy płatność paypal włączona
+paypal_id - klucz client id paypal
+paypal_secret - klucz client secret paypal
+webhook - url do discordowego webhooka
+
+=== SKLEP ===
+REF: /shops/[id sklepu]
+name - nazwa sklepu
+icon - url ikony
+owner - id właściciela
+collected - zebrane w zł
+goal - cel w zł
+maxservices - ilość wyświetlanych ostatnich zakupów
+dsc - id serwera discordowego (do widżetu)
+last_payments_type - rodzaj listy ostatnich płatności
+theme - motyw strony
+gid - ID google analytics
+announcement - czasowe ogłoszenie w html
+topc - czy widżet z top-customerem jest włączony
+
+=== STRONY W SKLEPIE ===
+REF: /shops/[id sklepu]/pages/[id strony]
+name - nazwa strony
+content - treść strony
+
+=== USŁUGA W SKLEPIE ===
+REF: /shops/[id sklepu]/service/[id usługi]
+commands - komendy wykonywane przez serwer
+description - opis usługi
+icon - ikona usługi
+iconUrl - adres Url ikony
+name - nazwa usługi
+server - id serwera
+costslider - czy suwak do wyboru ilości jest włączony
+microsms_transfer - czy płatność przelewem włączona
+microsms_transfer_cost - koszt przelewu
+microsms_sms - czy płatność smsem włączona
+microsms_sms_type - typ smsa
+microsms_sms_list - lista z smsami i ilościami usług
+lvlup - czy płatność lvlup włączona
+lvlup_cost - koszt płatności lvlup
+paypal_p24 - czy płatność paypal przelewy 24 włączona
+paypal_p24_cost - korzy płatności przelewy 24 paypal
+paysafecard - czy płatność paysafecard jest włączona
+paysafecard_cost - koszt płatności paysafecard
+
+=== PŁATNOŚĆ W SKLEPIE ===
+REF: /shops/[id sklepu]/history
+date - data płatności
+nick - nick kupującego
+service - nazwa usługi
+serviceid - id usługi
+type - typ usługi
+
+=== SERWER ===
+REF: /servers/[id serwera]
+owner - id właściciela
+serverName - nazwa serwera
+commands - komendy wysyłane do serwera
+
+=== AKTYWNE PŁATNOŚCI LVLUP ===
+REF: /lvlup_payment/[id płatności]
